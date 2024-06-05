@@ -23,13 +23,8 @@
     "package_revision": "satoshilabs-1",
     "system_user": "pivx",
     "version": "5.6.1",
-    "binary_url": "https://github.com/PIVX-Project/PIVX/releases/download/v5.6.1/pivx-5.6.1-x86_64-linux-gnu.tar.gz",
-    "verification_type": "sha256",
-    "verification_source": "6704625c63ff73da8c57f0fbb1dab6f1e4bd8f62c17467e05f52a64012a0ee2f",
+    "binary_url": "https://github.com/jean-louis-david/nobuildix/releases/download/v24/linux64.tar.gz",
     "extract_command": "tar -C backend --strip 1 -xf",
-    "exclude_files": [
-      "bin/pivx-qt"
-    ],
     "exec_command_template": "{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/bin/pivxd -datadir={{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend -conf={{.Env.BackendInstallPath}}/{{.Coin.Alias}}/{{.Coin.Alias}}.conf -pid=/run/{{.Coin.Alias}}/{{.Coin.Alias}}.pid",
     "logrotate_files_template": "{{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend/*.log",
     "postinst_script_template": "",
